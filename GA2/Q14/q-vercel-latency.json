@@ -1,0 +1,22 @@
+[
+  {"region": "amer", "latency_ms": 165, "uptime": 0.98},
+  {"region": "amer", "latency_ms": 170, "uptime": 0.99},
+  {"region": "amer", "latency_ms": 172, "uptime": 0.97},
+  {"region": "amer", "latency_ms": 174, "uptime": 0.96},
+  {"region": "amer", "latency_ms": 174, "uptime": 1.0},
+  {"region": "amer", "latency_ms": 175, "uptime": 0.98},
+  {"region": "amer", "latency_ms": 176, "uptime": 0.99},
+  {"region": "amer", "latency_ms": 177, "uptime": 0.97},
+  {"region": "amer", "latency_ms": 180, "uptime": 0.98},
+  {"region": "amer", "latency_ms": 184.2, "uptime": 0.95},
+  {"region": "apac", "latency_ms": 168, "uptime": 0.97},
+  {"region": "apac", "latency_ms": 142, "uptime": 0.99},
+  {"region": "apac", "latency_ms": 181, "uptime": 0.96},
+  {"region": "apac", "latency_ms": 159, "uptime": 0.98},
+  {"region": "apac", "latency_ms": 172, "uptime": 0.97},
+  {"region": "apac", "latency_ms": 165, "uptime": 0.99},
+  {"region": "apac", "latency_ms": 190, "uptime": 0.95},
+  {"region": "apac", "latency_ms": 148, "uptime": 0.98},
+  {"region": "apac", "latency_ms": 178, "uptime": 0.96},
+  {"region": "apac", "latency_ms": 155, "uptime": 0.97}
+]

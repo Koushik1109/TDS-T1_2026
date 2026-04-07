@@ -1,0 +1,14 @@
+import base64
+import json
+
+def decode_jwt(token):
+    try:
+        header, payload, signature = token.split('.')
+        # Fix padding for base64
+        payload_decoded = base64.urlsafe_b64decode(payload + '=' * (4 - len(payload) % 4))
+        return json.loads(payload_decoded)
+    except Exception as e:
+        return {"error": str(e)}
+
+token = "eyJhbGciOiJSUzI1NiIsImtpZCI6ImQyNzU0MDdjMzllODAzNmFhNzM1ZWIyYzE3YzU0ODc2MWNlZDZhNjQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxMDkxNjY3MDcyNjQzLW9rN2Y5Mzh0ZmVmdmwya2Q2N2s2Y2FwbXEwOTJpcTJoLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiMTA5MTY2NzA3MjY0My1vazdmOTM4dGZlZnZsMmtkNjdrNmNhcG1xMDkyaXEyaC5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjExMjkzMDU3OTgyMTA3ODc1MzE1NyIsImhkIjoiZHMuc3R1ZHkuaWl0bS5hYy5pbiIsImVtYWlsIjoiMjRkczMwMDAwMDZAZHMuc3R1ZHkuaWl0bS5hYy5pbiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoibGVsbVRBTDdBUHhqcXNUY0tVdDNmQSIsIm5vbmNlIjoiVnlQNUYwMlMwNlBSNTZnYUZZeVQiLCJuYW1lIjoiS09VU0hJSyBHQVJHIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0l2bVhRZW4wOVFWRC16al9zalZEZFp4Q0ZNTXdqX2s0QkxjOF9KMlZiQ1BHX2liUT1zOTYtYyIsImdpdmVuX25hbWUiOiJLT1VTSElLIiwiZmFtaWx5X25hbWUiOiJHQVJHIiwiaWF0IjoxNzcxNzYyOTQ5LCJleHAiOjE3NzE3NjY1NDl9.QRkD5nYNpVCv-sA4SX-IR9uMQQxIj15gCZ_QXrRnB6t8YOpMi1fFBMauT6tT8n5pdvE-cihEfYKJvsu1SspSzTOs6yNmnVFaThA447dot7VURWOIm7LLGOgDMG4zQsm-mIVZC1J4ysSHTQno7UsTfJkIr7OOxgr0iIIEp1vou8iShGCsbCzuz2JKqnWSnDpJZnqexpO3ubBUhg_lipdV1QWBff4YlBK5C10kUq_sGQYmiUOrzsm1giEOyveYeE2x6JLJboXVZZiR72vk6-QKG5j7dm673hvj_Ebjq89FdqqIaijkhddYS6a0NeundbZmiOTVYA6AOfJvrbyZUrl9Rw"
+print(decode_jwt(token))
